@@ -1,3 +1,6 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
 #include "matriz.h"
 
 double* vetcria (int n)
@@ -15,8 +18,7 @@ void vetlibera (double* v)
 {
   free(v);
 }
-
-double escalar (int n, double* v, double* w)
+/*double escalar (int n, double* v, double* w)
 {
   double esc=0;
   for(int i = 0; i < n; i++)
@@ -33,13 +35,25 @@ double norma2 (int n, double* v)
   norma = sqrt(norma);
   return norma;
 }
-
+*/
 
 /* A matriz será representada por um vetor de ponteiros, onde cada elemento
-aponta para o vetor linha.*/
+aponta para o vetor linha.
+m é o numero de linhas
+n é o numero de colunas */
+
 double** matcria (int m, int n)
 {
-  return double n=0;
+  double **matriz;
+  int i;
+
+  matriz = vetcria(n);
+  for(i=0; i<n; i++)
+  {
+    matriz[i] = vetcria(m);
+  }
+
+  return matriz;
 }
 
 void matlibera (int m, double** A)

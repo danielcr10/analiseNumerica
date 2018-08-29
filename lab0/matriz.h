@@ -1,15 +1,10 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
-
-
 double* vetcria (int n);
 
 void vetlibera (double* v);
 
-double escalar (int n, double* v, double* w);
+//double escalar (int n, double* v, double* w);
 
-double norma2 (int n, double* v);
+//double norma2 (int n, double* v);
 
 double** matcria (int m, int n);
 
