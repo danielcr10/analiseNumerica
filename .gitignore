@@ -2,3 +2,5 @@
 .vscode/
 matriz.h.gch
 test
+*.out
+
