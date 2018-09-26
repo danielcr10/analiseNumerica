@@ -1,15 +1,20 @@
 void QR (int m, int n, double** A, double** Q, double** R)
 {
+  //TODO: Inicializar vetor v e matriz QT
   //Pegar os v. v[0] = primeira coluna de a, v[1] = segunda coluna de A...
-  for(int i = 0; i < )
-  {
-    A[i][1] //todos elementos da primeira coluna
-  }
+ 
   for(int j = 0; j < n; j++)
   {
-    w[i] = v[j];
-    for(int i = 0; i < n; i++)
+  
+    for(int i = 0; i < m; i++)//preenche o vetor v e w = v
     {
+      v[i] = A[i][j]; //todos elementos da primeira coluna
+      w[i] = v[i];
+    }
+    
+    for(int i = 0; i < j; i++)
+    {
+    transposta(m, n, Q, QT);
       R[i][j] = QT[i] * w; //i = j-1
       w = w - r[i][j] * Q[i]; //
     }
