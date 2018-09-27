@@ -30,8 +30,9 @@ void matlibera (int m, double** A)
 void transposta (int m, int n, double** A, double** T)
 {
   for (int i=0; i<m; ++i)
-    for (int j=0; j<n; ++j)
+    for (int j=0; j<n; ++j){
       T[j][i] = A[i][j];
+    }
 }
   
 void multmv (int m, int n, double** A, double* v, double* w)
@@ -52,5 +53,16 @@ void multmm (int m, int n, int q, double** A, double** B, double** C)
         C[i][k] += A[i][j] * B[j][k];
     }
   }
+}
+
+double norma2(int n, double* v)
+{
+  int i;
+  double somatorio = 0;
+  for(i = 0; i < n; i++) {
+    somatorio += pow(v[i], 2);
+  }
+
+  return sqrt(somatorio);
 }
   
