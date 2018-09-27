@@ -1,7 +1,8 @@
 void QR (int m, int n, double** A, double** Q, double** R)
 {
-  //TODO: Inicializar vetor v e matriz QT
-  //Pegar os v. v[0] = primeira coluna de a, v[1] = segunda coluna de A...
+  double* v = vetcria(n);
+  double* w = vetcria(n);
+  double** QT = (n, m);
  
   for(int j = 0; j < n; j++)
   {
@@ -14,12 +15,13 @@ void QR (int m, int n, double** A, double** Q, double** R)
     
     for(int i = 0; i < j; i++)
     {
-    transposta(m, n, Q, QT);
-      R[i][j] = QT[i] * w; //i = j-1
-      w = w - r[i][j] * Q[i]; //
+      transposta(m, n, Q, QT);
+      multmv();
+      R[i][j] = QT[i] * w; //
+      w = w - R[i][j] * Q[i];
     }
-    r[j][j] = norma(); //
-    q[j] = w/r[j][j];
+    R[j][j] = norma(n, w);
+    Q[j] = w/r[j][j];
   }
 }
 
