@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <math.h>
+#include <math.h> 
 #include "matriz.h"
 double escalar(int n, double* v, double* w);
 double norma (int m, double* v);
